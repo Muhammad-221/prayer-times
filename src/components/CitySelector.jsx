@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MapPin, ChevronDown, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LangContext";
@@ -11,6 +11,13 @@ export default function CitySelector({ selectedCity, onCityChange }){
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const { t, lang } = useLanguage();
+
+  useEffect(() => {
+    const savedCity = localStorage.getItem("selectedCity");
+    if (savedCity) {
+      onCityChange(savedCity);
+    }
+  }, []);
 
   const cities = cityKeys.map((key) => ({
     id: key,
@@ -58,6 +65,7 @@ export default function CitySelector({ selectedCity, onCityChange }){
                 key={city.id}
                 onClick={() => {
                   onCityChange(city.id);
+                  localStorage.setItem("selectedCity", city.id);
                   setIsOpen(false);
                   setSearch("");
                 }}
