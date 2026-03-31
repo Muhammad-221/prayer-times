@@ -1,16 +1,26 @@
-# React + Vite
+# Prayer Times Web App 🕌
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web application that shows daily prayer times for different cities in Egypt. Built with modern web technologies.
 
-Currently, two official plugins are available:
+## Features
+- Daily prayer times based on city selection
+- Supports multiple cities in Egypt
+- Clean and responsive design
+- Light & Dark mode (if applicable)
+- Icons for each prayer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Frontend:** React, Tailwind CSS, Shadcn UI
+- **API:** Prayer times API (or your custom API)
+- **Icons:** Lucide React
 
-## React Compiler
+## Demo
+![Prayer Times Screenshot](link-to-screenshot.png)
+**Live Demo:** [Insert GitHub Pages or Vercel/Netlify link]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run Locally
+```bash
+git clone https://github.com/Muhammad-221/prayer-times.git
+cd prayer-times
+npm install
+npm run dev
