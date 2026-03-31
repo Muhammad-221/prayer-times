@@ -15,8 +15,8 @@ A responsive web application that shows daily prayer times for different cities 
 - **Icons:** Lucide React
 
 ## Demo
-![Prayer Times Screenshot](link-to-screenshot.png)
-**Live Demo:** [[Insert GitHub Pages or Vercel/Netlify link](https://muhammad-221.github.io/prayer-times/)]
+
+**Live Demo: https://muhammad-221.github.io/prayer-times/
 
 ## How to Run Locally
 ```bash
