@@ -6,13 +6,14 @@ A responsive web application that shows daily prayer times for different cities 
 - Daily prayer times based on city selection
 - Supports multiple cities in Egypt
 - Clean and responsive design
-- Light & Dark mode (if applicable)
+- Multi-language support (translation feature)
 - Icons for each prayer
 
 ## Tech Stack
-- **Frontend:** React, Tailwind CSS, Shadcn UI
+- **Frontend:** React, Tailwind CSS, Shadcn UIو API Integration
 - **API:** Prayer times API (or your custom API)
 - **Icons:** Lucide React
+- *Translation:** Multi-language support implementation
 
 ## Demo
 
