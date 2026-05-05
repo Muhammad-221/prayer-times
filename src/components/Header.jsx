@@ -1,10 +1,7 @@
-// import { Moon, Sun } from "lucide-react";
-// import { useTheme } from "../theme/ThemeContext";
 import { useLanguage } from "@/contexts/LangContext";
 import { Button } from "./ui/button";
  
 export default function Header({scroll}){
-    // const {theme, toggleTheme} = useTheme();
     const { t, lang, setLang } = useLanguage();
 
     return(

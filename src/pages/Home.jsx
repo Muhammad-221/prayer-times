@@ -104,8 +104,9 @@ export default function HomePage(){
                 nextPrayerTime.setHours(hours, minutes, 0, 0);
                 nextPrayerName = "fajr";
             }
-
-            const diff = nextPrayerTime - now; // بالميلي ثانية
+            
+            // بالميلي ثانية
+            const diff = nextPrayerTime - now; 
             const hours = Math.floor(diff / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
@@ -136,8 +137,8 @@ export default function HomePage(){
                 <main className="container max-w-lg mx-auto">
                     <div className="flex flex-col items-center justify-center">
                         <h1 className="mb-2 text-4xl font-bold mx-auto text-yellow-500">{t("app.title")}</h1>
-                        <p className="text-slate-400 text-base font-medium">{prayerData.hijri}</p>
-                        <p className="text-slate-600 text-lg">{prayerData.gregorian}</p>
+                        <p className="text-slate-400 text-base font-medium">{prayerData ? prayerData.hijri : "Loading..."}</p>
+                        <p className="text-slate-600 text-lg">{prayerData ? prayerData.gregorian : "Loading..."}</p>
                     </div>
                     <div className="flex items-center justify-between my-5 px-3">
                         <span className="text-slate-600 text-xl font-medium">{t("section.prayerTimes")}</span>
@@ -145,13 +146,13 @@ export default function HomePage(){
                     </div>
                     <div className="py-5 my-5 bg-slate-900 border border-slate-400/20 rounded-2xl flex flex-col gap-3 items-center justify-center shadow-lg">
                         <span className="text-slate-400 text-base font-medium">{t("app.current-time")}</span>
-                        <span className="glow text-5xl font-bold text-amber-300/85 md:text-6xl time-display">{time.current}</span>
+                        <span className="glow text-5xl font-bold text-amber-300/85 md:text-6xl time-display">{time ? time.current : "Loading..."}</span>
                         <div className="mx-auto h-px w-2/3 bg-gradient-to-l from-transparent via-amber-300/30 to-transparent" />
                         <div className="text-base flex gap-2">
                             <span className="text-slate-400 font-medium">{t("countdown.remaining")} </span>
                             <span className="text-amber-300/85 font-bold">{prayers.find(p => p.id === activePrayer)?.name}</span>
                         </div>
-                        <span className="text-3xl font-bold text-white">{time.remaining}</span>
+                        <span className="text-3xl font-bold text-white">{time ? time.remaining : "Loading..."}</span>
                     </div>
 
                     {prayers.map((prayer) => (

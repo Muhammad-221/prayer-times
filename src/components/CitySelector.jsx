@@ -16,6 +16,9 @@ export default function CitySelector({ selectedCity, onCityChange }){
     const savedCity = localStorage.getItem("selectedCity");
     if (savedCity) {
       onCityChange(savedCity);
+    }else{
+      onCityChange("cairo")
+      localStorage.setItem("selectedCity", "cairo");
     }
   }, []);
 
