@@ -1,6 +1,7 @@
+
 # Prayer Times Web App 🕌
 
-A responsive web application that shows daily prayer times for different cities in Egypt. Built with modern web technologies.
+An elegant and accurate web application that provides daily prayer timings based on the user's location. This project is designed to help Muslims stay connected to their prayers with a simple, clean, and modern interface.
 
 ## Features
 - Daily prayer times based on city selection
@@ -25,3 +26,5 @@ git clone https://github.com/Muhammad-221/prayer-times.git
 cd prayer-times
 npm install
 npm run dev
+
+
